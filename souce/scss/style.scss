@@ -1,0 +1,591 @@
+@import "nullstyle.scss";
+
+$col_gray  :#545454;
+$col_orange:#f1cdb3;
+
+$ff_ar:Arial,"Helvetica Neue",Helvetica,sans-serif;
+$ff_ger:Georgia, 'Times New Roman', Times, serif;
+$bg_gray:#f6f6f6;
+
+@mixin block_backgound($height,$backg) {
+    height: $height;
+    background: $backg;
+}
+.container {
+    max-width  : 1920px;
+    margin     : 0 auto;
+    min-height : 3707px;
+    font-family: $ff_ar;
+
+    .content {
+        margin: 0 auto;
+        width : 1080px;
+    }
+}
+
+.dog_top_header {
+    padding-top: 59px;
+    background : url("../../img/Background_top.png") 0 0/1932px 925px no-repeat;
+    min-height : 925px;
+
+    .dog_top_header_up {
+
+        .block_row {
+            display        : flex;
+            width          : 100%;
+            justify-content: space-around;
+
+            .block_row_left {
+                width: 20%;
+
+                h1 {
+                    font-size  : 32px;
+                    font-family: $ff_ger;
+                    color      : $col_orange;
+                }
+
+                p {
+                    padding-top: 8px;
+                    font-size  : 13px;
+                    color      : white;
+                }
+            }
+
+            .block_row_right {
+                width     : 80%;
+                text-align: right;
+
+                li {
+                    display       : inline-block;
+                    margin        : 0px 5px 0px 38px;
+                    line-height   : 20px;
+                    padding-top   : 12px;
+                    border-bottom : 3px solid rgba($col_orange, $alpha: 0);
+                    border-top    : 1px solid rgba($col_orange, $alpha: 0);
+                    transition    : 1.1s;
+                    padding-bottom: 3px;
+
+                    a {
+                        font-size: 15px;
+                        color    : white;
+                    }
+                }
+
+                li:hover {
+                    border-bottom: 3px solid rgba($col_orange, $alpha: 1);
+                    transition   : 1.1s;
+                }
+            }
+        }
+    }
+
+    .dog_top_header_bottom {
+        width     : 459px;
+        margin-top: 251px;
+        color     : white;
+
+        p:first-child {
+            font-size    : 44px;
+            padding-right: 50px;
+            line-height  : 57px;
+            font-family  : $ff_ger;
+        }
+
+        p:nth-child(2) {
+            color      : #cdcdcd;
+            font-size  : 15px;
+            line-height: 24px;
+            padding-top: 46px;
+        }
+
+        a {
+            font-size    : 17px;
+            padding      : 15px 55px 15px 55px;
+            background   : $col_orange;
+            border-radius: 30px;
+            color        : #292929;
+            margin-top   : 35px;
+            display      : inline-block;
+            transition   : 0.2s;
+            box-shadow   : 0 5px 5px 2px rgb(248, 229, 193);
+            bottom       : 5px;
+            position     : relative;
+
+            &:hover {
+                transition: 0.2s;
+            }
+
+            &:active {
+                bottom    : 0px;
+                box-shadow: 0 0px 1px rgb(255, 223, 163);
+                transition: 0.2s;
+            }
+        }
+    }
+}
+
+.about_pets {
+    @include block_backgound(586px,white);
+    padding-top: 89px;
+
+    .about_pets_row {
+        display        : flex;
+        justify-content: center;
+
+        .about_pets_row__col {
+            width: 38.5%;
+
+            .col_text {
+                padding-top: 24px;
+
+                p:first-child {
+                    font-family   : $ff_ger;
+                    font-size     : 35px;
+                    padding-right : 100px;
+                    line-height   : 45px;
+                    letter-spacing: 2px;
+                    color         : $col_gray;
+
+                }
+
+                p {
+                    font-size     : 14px;
+                    padding       : 0 0px 25px 0;
+                    line-height   : 24px;
+                    letter-spacing: 0px;
+                }
+            }
+
+            .col_imga {
+                width: 300px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
+
+.friends {
+    padding-top:66px;
+    @include block_backgound(833px,$bg_gray);
+    .content {
+        position: relative;
+    }
+
+    a {
+        padding       : 15px 47px;
+        border        : 3px solid $col_orange;
+        border-radius : 50px;
+        line-height   : 57px;
+        letter-spacing: 1.02px;
+        font-size     : 17px;
+        color         : #292929;
+        font-family   : $ff_ger;
+        transition    : 0.5s;
+    }
+
+    a:hover {
+        background: $col_orange;
+        transition: 0.5s;
+    }
+
+    .friend_top {
+        text-align: center;
+        width     : 100%;
+
+        p {
+            width : 352px;
+            margin: 0 auto;
+
+            font-size     : 35px;
+            color         : $col_gray;
+            letter-spacing: 2.1px;
+            line-height   : 45px;
+            font-family   : $ff_ger;
+        }
+
+        p:last-child {
+            width  : 420px;
+            padding: 0;
+        }
+    }
+
+    .friend_center {
+        padding: 65px 0 27px 0;
+
+
+        .friend_center_row {
+            max-width      : 540px+370px;
+            display        : flex;
+            margin         : 0 auto;
+            justify-content: space-around;
+
+            .friend_center_row__col {
+                width         : 29%;
+                background    : #fafafa;
+                border        : 1px solid $col_orange;
+                text-align    : center;
+                border-radius : 12px;
+                overflow      : hidden;
+                padding-bottom: 30px;
+                position      : relative;
+                bottom        : 0px;
+                transition    : 0.5s;
+                min-height    : 425px;
+
+                img {
+                    width     : 100%;
+                    text-align: center;
+                }
+
+                p {
+                    font-size     : 20px;
+                    letter-spacing: 1.2px;
+                    line-height   : 45px;
+                    font-family   : $ff_ger;
+                    padding-top   : 20px;
+                    padding-bottom: 8px;
+                }
+
+            }
+
+            .friend_center_row__col:hover {
+                bottom    : 10px;
+                box-shadow: 0 10px 10px $col_orange;
+                transition: 0.3s;
+
+            }
+        }
+
+        .krug {
+            background: $col_orange;
+
+            width        : 50px;
+            height       : 50px;
+            border       : 3px solid $col_orange;
+            border-radius: 50%;
+            cursor       : pointer;
+            transition   : 0.5s;
+
+        }
+
+        .left_strela {
+            position  : absolute;
+            left      : 0px;
+            top       : 48.5%;
+            background: url("../../simvol/long-left-arrow.png") 50% 50%/15px 7px no-repeat;
+        }
+
+        .left_strela:hover {
+            background: url("../../simvol/long-left-arrow.png") 50% 50%/15px 7px no-repeat, $col_orange;
+            transition: 0.5s;
+
+        }
+
+        .right_strela {
+
+            position  : absolute;
+            right     : 0px;
+            top       : 48.5%;
+            background: url("../../simvol/long-right-arrow.png") 50% 50%/15px 7px no-repeat;
+        }
+
+        .right_strela:hover {
+            background: url("../../simvol/long-right-arrow.png") 50% 50%/15px 7px no-repeat, $col_orange;
+            transition: 0.5s;
+        }
+    }
+
+    .friend_bottom {
+        text-align: center;
+        padding   : 35px 0 0 0;
+    }
+
+}
+
+.than_help {
+    @include block_backgound(595px,white);
+
+    .than_help_top {
+        padding-top: 59px;
+        max-width  : 328px;
+        margin     : 0 auto;
+
+        p {
+            font-size     : 35px;
+            line-height   : 45px;
+            text-align    : center;
+            font-family   : $ff_ger;
+            letter-spacing: 2.1px;
+            color         : $col_gray;
+        }
+    }
+
+    .than_help_bottom {
+        margin-top: 70px;
+
+        .than_help_bottom_row {
+            display        : flex;
+            justify-content: center;
+            flex-wrap      : wrap;
+            width          : 100%;
+
+            .than_help_row_col:nth-child(2) {
+                img {
+                    position: relative;
+                    top     : -7px;
+                }
+
+                p {
+                    margin-top: 7px;
+                }
+            }
+
+            .than_help_row_col {
+                width        : 20%;
+                text-align   : center;
+                margin-bottom: 67px;
+                position     : relative;
+                transition   : 0.3s;
+                bottom       : 0;
+
+                .col_imga {
+                    vertical-align: top;
+                }
+
+                p {
+                    margin-top    : 15px;
+                    font-size     : 20px;
+                    line-height   : 45px;
+                    font-family   : $ff_ger;
+                    letter-spacing: 1.2px;
+                    color         : $col_gray;
+                }
+            }
+
+            .than_help_row_col:hover {
+                bottom    : 5px;
+                box-shadow: 0 5px 3px $col_orange;
+                cursor    : pointer;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+.donate {
+    color      : $col_gray;
+    padding-top: 55px;
+    @include block_backgound(434px,$bg_gray);
+
+    .donate_row {
+        display        : flex;
+        justify-content: center;
+
+
+
+        .donate_row_col {
+            width   : 50%;
+            position: relative;
+
+            p {
+                font-size     : 35px;
+                line-height   : 45px;
+                letter-spacing: 2.1px;
+                font-family   : $ff_ger;
+            }
+
+            .name_p {
+                margin-top    : 8px;
+                font-size     : 15px;
+                letter-spacing: 1px;
+            }
+
+            a {
+                color         : #292929;
+                background    : $col_orange;
+                vertical-align: top;
+                font-size     : 20px;
+                line-height   : 45px;
+                display       : inline-block;
+                height        : 47px;
+                position      : relative;
+                border-radius : 10px;
+                font-family   : 'TimesNewRomanPSMT';
+                transition    : 0.3s;
+                letter-spacing: 1.2px;
+                outline       : 2px solid rgba($color: #000000, $alpha: 0);
+
+                span {
+                    padding: 0 15px 0 59px;
+                }
+
+                vertical-align: middle;
+
+                span::before {
+                    content   : '';
+                    background: url("../../simvol/credit-card.png") 0 100%/30px 22px no-repeat;
+                    width     : 30px;
+                    height    : 22px;
+                    position  : absolute;
+                    top       : 12px;
+                    left      : 0;
+                    margin    : 0 14px;
+                }
+            }
+
+            a:hover {
+                outline   : 2px solid #292929;
+                transition: 0.3s;
+            }
+
+            .col_imga {
+                position : absolute;
+                bottom   : 0;
+                max-width: 500px;
+
+                img {
+                    width: 100%;
+                }
+
+            }
+
+            p:last-child {
+                margin-top    : 25px;
+                color         : #b2b2b2;
+                font-size     : 12px;
+                line-height   : 18px;
+                max-width     : 354px;
+                letter-spacing: 0.29px;
+            }
+        }
+    }
+
+
+}
+
+.footer {
+    @include block_backgound(362px,url("../../img/tof.png"));
+
+    .content {
+        width: 1165px;
+    }
+
+    .footer_row {
+        display: flex;
+        width  : 100%;
+
+        .footer_row_col:last-child {
+            margin-left: 160px;
+        }
+
+        .footer_row_col {
+            margin-top: 65px;
+            max-width : 290px;
+
+            p {
+                font-size     : 35px;
+                line-height   : 45px;
+                letter-spacing: 2.1px;
+                font-family   : $ff_ger;
+                color         : #fff;
+            }
+
+            a {
+                color         : $col_orange;
+                font-size     : 20px;
+                letter-spacing: 1.2px;
+                display       : inline-block;
+                font-family   : TimesNewRomanPSMT;
+            }
+
+            .email {
+                margin-top: 27px;
+                position  : relative;
+
+                span {
+                    line-height : 45px;
+                    padding-left: 63px;
+                }
+
+                span:before {
+                    content   : '';
+                    width     : 40px;
+                    height    : 26px;
+                    background: url("../../simvol/email.png") 0 0/100% no-repeat;
+                    display   : inline-block;
+                    position  : absolute;
+                    top       : 7.5px;
+                    left      : 0;
+                }
+            }
+
+            .tel {
+                margin-top: 19px;
+                position  : relative;
+
+                span {
+                    line-height : 45px;
+                    padding-left: 63px;
+                }
+
+                span:before {
+                    content   : '';
+                    width     : 40px;
+                    height    : 30px;
+                    background: url("../../simvol/telephone.png") 0 0/100% no-repeat;
+                    display   : inline-block;
+                    position  : absolute;
+                    top       : 5.5px;
+                    left      : 0;
+                }
+            }
+
+            .gps {
+                position  : relative;
+                margin-top: 30px;
+
+                span {
+                    padding-left: 47px;
+                    display     : inline-block;
+                }
+
+                span:before {
+                    content   : '';
+                    width     : 24px;
+                    height    : 36px;
+                    background: url("../../simvol/gps.png") 0 0/100% no-repeat;
+                    display   : inline-block;
+                    position  : absolute;
+                    top       : 0px;
+                    left      : 0;
+                }
+            }
+
+            .gps_2 {
+                position  : relative;
+                margin-top: 32px;
+
+                span {
+                    padding-left: 47px;
+                    display     : inline-block;
+                }
+
+                span:before {
+                    content   : '';
+                    width     : 24px;
+                    height    : 36px;
+                    background: url("../../simvol/gps.png") 0 0/100% no-repeat;
+                    display   : inline-block;
+                    position  : absolute;
+                    top       : -7px;
+                    left      : 0;
+                }
+            }
+
+        }
+    }
+}
